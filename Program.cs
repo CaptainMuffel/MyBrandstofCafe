@@ -1,8 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using MyBrandstofCafe.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+//Register DbContext
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<VoorraadDbContext>(Options => Options.UseSqlServer
+(connectionString));
+
+//Build connection
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

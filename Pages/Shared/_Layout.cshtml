@@ -21,35 +21,47 @@
         </nav>
     </header>
     <!--Zelf Gemaakt-->
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="Start-tab" data-bs-toggle="tab" data-bs-target="#Start" type="button" role="tab" aria-controls="Start" aria-selected="true" asp-page="Index">Start</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="Bestelling-tab" data-bs-toggle="tab" data-bs-target="#Bestelling" type="button" role="tab" aria-controls="Bestelling" aria-selected="false" asp-page="Bestelling/Index">Bestelling</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="Plattegrond-tab" data-bs-toggle="tab" data-bs-target="#Plattegrond" type="button" role="tab" aria-controls="Plattegrond" aria-selected="false" asp-page="Plattegrond/Index">Plattegrond</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="Voorraad-tab" data-bs-toggle="tab" data-bs-target="#Voorraad" type="button" role="tab" aria-controls="Voorraad" aria-selected="false" asp-page="Voorraad/Index">Voorraad</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="Werknemer-tab" data-bs-toggle="tab" data-bs-target="#Werknemer" type="button" role="tab" aria-controls="Werknemer" aria-selected="false" asp-page="Werknemer/Index">Werknemer</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="Documentatie-tab" data-bs-toggle="tab" data-bs-target="#Documentatie" type="button" role="tab" aria-controls="Documentatie" aria-selected="false" asp-page="Documentatie/Index">Documentatie</button>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-start-tab" data-bs-toggle="tab" data-bs-target="#nav-start" type="button" role="tab" aria-controls="nav-start" aria-selected="true"><a asp-page="/Index">Start</a></button>
+            <button class="nav-link" id="nav-bestelling-tab" data-bs-toggle="tab" data-bs-target="#nav-bestelling" type="button" role="tab" aria-controls="nav-bestelling" aria-selected="false"><a asp-page="Bestellingen/Index">Bestelling</a></button>
+            <button class="nav-link" id="nav-Plattegrond-tab" data-bs-toggle="tab" data-bs-target="#nav-Plattegrond" type="button" role="tab" aria-controls="nav-Plattegrond" aria-selected="false"><a asp-page="Plattegrond/Index">Plattegrond</a></button>
+            <button class="nav-link" id="nav-Voorraad-tab" data-bs-toggle="tab" data-bs-target="#nav-Voorraad" type="button" role="tab" aria-controls="nav-Voorraad" aria-selected="false"><a asp-page="Voorraad/Index">Voorraad</a></button>
+            <button class="nav-link" id="nav-Werknemer-tab" data-bs-toggle="tab" data-bs-target="#nav-Werknemer" type="button" role="tab" aria-controls="nav-Werknemer" aria-selected="false"><a asp-page="Werknemer/Index">Werknemer</a></button>
+            <button class="nav-link" id="nav-Documentatie-tab" data-bs-toggle="tab" data-bs-target="#nav-Documentatie" type="button" role="tab" aria-controls="nav-Documentatie" aria-selected="false"><a asp-page="/Documentatie">Documentatie</a></button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-start" role="tabpanel" aria-labelledby="nav-start-tab"></div>
+        <div class="tab-pane fade" id="nav-bestelling" role="tabpanel" aria-labelledby="nav-bestelling-tab"></div>
+        <div class="tab-pane fade" id="nav-Plattegrond" role="tabpanel" aria-labelledby="nav-Plattegrond-tab"></div>
+        <div class="tab-pane fade" id="nav-Voorraad" role="tabpanel" aria-labelledby="nav-Voorraad-tab"></div>
+        <div class="tab-pane fade" id="nav-Werknemer" role="tabpanel" aria-labelledby="nav-Werknemer-tab"></div>
+        <div class="tab-pane fade" id="nav-Documentatie" role="tabpanel" aria-labelledby="nav-Documentatie-tab"></div>
     </div>
+    <!-- Let op deze up to date'n en in te voegen voor tab<script>
+        $(document).ready(function () {
+            //grabs the hash tag from the url
+            var hash = window.location.hash;
+            //checks whether or not the hash tag is set
+            if (hash != "") {
+                //removes all active classes from tabs
+                $('#tabs li').each(function () {
+                    $(this).removeClass('active');
+                });
+                //this will add the active class on the hashtagged value
+                var link = "";
+                $('#tabs li').each(function () {
+                    link = $(this).find('a').attr('href');
+                    if (link == hash) {
+                        $(this).addClass('active');
+                    }
+                });
+            }
+
+        });
+    </script>-->
     <!--Einde invoeg-->
-
-
-
 
     <div class="container">
         <main role="main" class="pb-3">
