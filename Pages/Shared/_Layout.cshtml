@@ -3,75 +3,42 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MyBrandstofCafe</title>
+    <title>@ViewData["Title"] - Brandstof Cafe</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MyBrandstofCafe.styles.css" asp-append-version="true" />
 </head>
+
 <body>
+    <div class="bg-image">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">MyBrandstofCafe</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <nav class="navbar bg-primary border-bottom box-shadow">
+                    <a asp-page="/Index"><img src="./Images/NHLStendenLogo.jpg" class="customIcon rounded float-start " alt="NhlStendenLogo" style="width: 4rem; height: 4rem;"></a>
+                <a class="navbar-brand text-white" asp-page="/Index">MyBrandstofCafe</a>
+            </nav>
+            <div class="container justify-content-center align-content-center" style="background-color:ghostwhite; height: 3rem;">
+                <div class="customButtons">
+                    <button href="../Index" type="button" class="btn btn-outline-info">Start</button>
+                    <button href="../Bestellingen/Index" type="button" class="btn btn-outline-info">Bestellen</button>
+                    <button href="../Plattegrond/Index" type="button" class="btn btn-outline-info">Plattegrond</button>
+                    <button href="../Voorraad/Index" type="button" class="btn btn-outline-info">Voorraad</button>
+                    <button href="../Werknemer/Index" type="button" class="btn btn-outline-info">Werknemer</button>
+                    <button href="../Documentatie" type="button" class="btn btn-outline-info">Documentatie</button>
+                </div>
             </div>
-        </nav>
     </header>
-    <!--Zelf Gemaakt-->
-    <nav>
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-start-tab" data-bs-toggle="tab" data-bs-target="#nav-start" type="button" role="tab" aria-controls="nav-start" aria-selected="true"><a asp-page="/Index">Start</a></button>
-            <button class="nav-link" id="nav-bestelling-tab" data-bs-toggle="tab" data-bs-target="#nav-bestelling" type="button" role="tab" aria-controls="nav-bestelling" aria-selected="false"><a asp-page="Bestellingen/Index">Bestelling</a></button>
-            <button class="nav-link" id="nav-Plattegrond-tab" data-bs-toggle="tab" data-bs-target="#nav-Plattegrond" type="button" role="tab" aria-controls="nav-Plattegrond" aria-selected="false"><a asp-page="Plattegrond/Index">Plattegrond</a></button>
-            <button class="nav-link" id="nav-Voorraad-tab" data-bs-toggle="tab" data-bs-target="#nav-Voorraad" type="button" role="tab" aria-controls="nav-Voorraad" aria-selected="false"><a asp-page="Voorraad/Index">Voorraad</a></button>
-            <button class="nav-link" id="nav-Werknemer-tab" data-bs-toggle="tab" data-bs-target="#nav-Werknemer" type="button" role="tab" aria-controls="nav-Werknemer" aria-selected="false"><a asp-page="Werknemer/Index">Werknemer</a></button>
-            <button class="nav-link" id="nav-Documentatie-tab" data-bs-toggle="tab" data-bs-target="#nav-Documentatie" type="button" role="tab" aria-controls="nav-Documentatie" aria-selected="false"><a asp-page="/Documentatie">Documentatie</a></button>
-        </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-start" role="tabpanel" aria-labelledby="nav-start-tab"></div>
-        <div class="tab-pane fade" id="nav-bestelling" role="tabpanel" aria-labelledby="nav-bestelling-tab"></div>
-        <div class="tab-pane fade" id="nav-Plattegrond" role="tabpanel" aria-labelledby="nav-Plattegrond-tab"></div>
-        <div class="tab-pane fade" id="nav-Voorraad" role="tabpanel" aria-labelledby="nav-Voorraad-tab"></div>
-        <div class="tab-pane fade" id="nav-Werknemer" role="tabpanel" aria-labelledby="nav-Werknemer-tab"></div>
-        <div class="tab-pane fade" id="nav-Documentatie" role="tabpanel" aria-labelledby="nav-Documentatie-tab"></div>
-    </div>
-    <!-- Let op deze up to date'n en in te voegen voor tab<script>
-        $(document).ready(function () {
-            //grabs the hash tag from the url
-            var hash = window.location.hash;
-            //checks whether or not the hash tag is set
-            if (hash != "") {
-                //removes all active classes from tabs
-                $('#tabs li').each(function () {
-                    $(this).removeClass('active');
-                });
-                //this will add the active class on the hashtagged value
-                var link = "";
-                $('#tabs li').each(function () {
-                    link = $(this).find('a').attr('href');
-                    if (link == hash) {
-                        $(this).addClass('active');
-                    }
-                });
-            }
+    </br>
 
-        });
-    </script>-->
-    <!--Einde invoeg-->
 
-    <div class="container">
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-white bg-primary">
         <div class="container">
-            &copy; 2024 - MyBrandstofCafe - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2024 - MyBrandstofCafe - <a class="text-light" asp-page="/Contact">Contact</a>
         </div>
     </footer>
 
@@ -80,5 +47,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+    </div>
 </body>
 </html>

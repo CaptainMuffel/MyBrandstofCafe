@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBrandstofCafe", "MyBrandstofCafe.csproj", "{1EFB0CDA-D307-413A-B67F-E8FF838BB24F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBrandstofCafe.Data", "..\MyBrandstofCafe.Data\MyBrandstofCafe.Data.csproj", "{9C79B139-852B-498A-B323-3DCC8368C872}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBrandstofCafe.Data", "..\MyBrandstofCafe.Data\MyBrandstofCafe.Data.csproj", "{9C79B139-852B-498A-B323-3DCC8368C872}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

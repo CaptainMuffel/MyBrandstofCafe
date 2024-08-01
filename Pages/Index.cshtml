@@ -4,11 +4,21 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+<div class="card justify-content-center align-content-center" style="width: 50%; height: 50%">
+    <img src="./Images/BrandstofCafeLM.jpg" class="card-img-top" alt="BrandstofCafeLM" style="width: 21,5rem; height: 21,5rem;">
+        <div class="card-body">
+            <h5 class="card-title">Snel bestellen!</h5>
+            <p class="card-text">Klik op de knop hieronder om snel naar bestellen te gaan!</p>
+            <a href="../Bestellingen/Index" class="btn btn-primary">Bestellen</a>
+        </div>
 </div>
 
-<button class="btn btn-primary text-black text-center" >
-    <a asp-area="" asp-page="Voorraad/Index">Voorraad</a>
-    </button>
+
+<style>
+    card-img-top{
+    object-fit: contain;
+    }
+</style>
+
