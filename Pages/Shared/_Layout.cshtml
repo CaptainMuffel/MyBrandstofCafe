@@ -10,23 +10,25 @@
 </head>
 
 <body>
-    <div class="bg-image">
+    
     <header>
             <nav class="navbar bg-primary border-bottom box-shadow">
-                    <a asp-page="/Index"><img src="./Images/NHLStendenLogo.jpg" class="customIcon rounded float-start " alt="NhlStendenLogo" style="width: 4rem; height: 4rem;"></a>
+                <a asp-page="/Index"><img src="./Images/NHLStendenLogo.jpg" class="customIcon rounded float-start " alt="NhlStendenLogo" style="width: 4rem; height: 4rem;"></a>
                 <a class="navbar-brand text-white" asp-page="/Index">MyBrandstofCafe</a>
             </nav>
-            <div class="container justify-content-center align-content-center" style="background-color:ghostwhite; height: 3rem;">
-                <div class="customButtons">
-                    <button href="../Index" type="button" class="btn btn-outline-info">Start</button>
-                    <button href="../Bestellingen/Index" type="button" class="btn btn-outline-info">Bestellen</button>
-                    <button href="../Plattegrond/Index" type="button" class="btn btn-outline-info">Plattegrond</button>
-                    <button href="../Voorraad/Index" type="button" class="btn btn-outline-info">Voorraad</button>
-                    <button href="../Werknemer/Index" type="button" class="btn btn-outline-info">Werknemer</button>
-                    <button href="../Documentatie" type="button" class="btn btn-outline-info">Documentatie</button>
-                </div>
-            </div>
+            <!--nog wat bugs maar werkend!!-->
+        <div class="container-fluid" style="background-color:ghostwhite; height: 3rem; width: 100%; align-content: center; justify-content: center;">
+            <button type="button" class="btn btn-outline-info"><a href="../Index">Start</a></button>
+            <button type="button" class="btn btn-outline-info"><a href="../Bestellingen/Index">Bestellen</a></button>
+            <button type="button" class="btn btn-outline-info"><a href="../Plattegrond/Index">Plattegrond</a></button>
+            <button type="button" class="btn btn-outline-info"><a href="../Voorraad/Index">Voorraad</a></button>
+            <button type="button" class="btn btn-outline-info"><a href="../Werknemer/Index">Werknemer</a></button>
+            <button type="button" class="btn btn-outline-info"><a href="../Documentatie">Documentatie</a></button>
+        </div>
     </header>
+
+    <!--Image voor achtergrond-->
+    <div class="bg-image">
     </br>
 
 
@@ -36,6 +38,7 @@
         </main>
     </div>
 
+    </div>
     <footer class="border-top footer text-white bg-primary">
         <div class="container">
             &copy; 2024 - MyBrandstofCafe - <a class="text-light" asp-page="/Contact">Contact</a>
@@ -47,6 +50,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
-    </div>
+
 </body>
 </html>
